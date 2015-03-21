@@ -11,9 +11,9 @@ navigation-bar {
 }
 
 navigation-bar title {
-  color: #ffffff;
+  color: yellow;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 navigation-bar button {
@@ -70,4 +70,12 @@ tab-bar-item#index {
 
 tab-bar-item#internet {
   background-image: url(icons/search.svg);
+}
+
+tab-bar-item#articles {
+  background-image: url(icons/list.svg);
+}
+
+tab-bar-item#home {
+  background-image: url(icons/home.svg);
 }
