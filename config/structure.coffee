@@ -10,7 +10,14 @@ module.exports =
       location: "brazilUnknown#home"
     }
     {
-      title: "Artitles"
+      title: "Articles"
+      id: "articles"
+      location: "brazilUnknown#articles"
+    }
+  ]
+
+  preloads: [
+    {
       id: "articles"
       location: "brazilUnknown#articles"
     }

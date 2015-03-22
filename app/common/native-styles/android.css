@@ -45,7 +45,8 @@ tab-bar {
 tab-bar tab-bar-item {
   color: #b0b1b4;
   font-family: "Roboto";
-  font-size: 10px;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 tab-bar tab-bar-item:selected {

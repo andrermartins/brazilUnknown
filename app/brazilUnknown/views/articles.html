@@ -1,57 +1,20 @@
 <div class="padding" ng-controller="ArticlesController">
 
-  <super-navbar>
-    <super-navbar-title>
-      Articles
-    </super-navbar-title>
-  </super-navbar>
+	<super-navbar>
+		<super-navbar-title>
+			Articles
+		</super-navbar-title>
+	</super-navbar>
 
-  <div class="list">
-
-    <a class="item item-thumbnail-left" href="http://brazilunknown.blogspot.com.br/2015/03/brazil-will-distribute-free-air-tickets.html">
-      <img src="http://3.bp.blogspot.com/-Zxyzjfx12gQ/VPx02jMI9TI/AAAAAAAAArA/WFnZTURJ7hg/s1600/20150303073816740593i.jpg"
-           height="78px" width="80px">
-      <h4>Brazil will distribute free air</h4>
-      <h4>tickets to congressmen's wives</h4>
-      <p>Sunday, March 8, 2015</p>
-    </a>
-
-    <a class="item item-thumbnail-left" href="#">
-      <img src="http://1.bp.blogspot.com/-dI4LPnUscvI/VOZ86Dy7q7I/AAAAAAAAAqE/f9GeKTENvQg/s1600/onde_fui_roubado.jpg"
-           height="78px" width="80px">
-      <h4>Brazilians use the Waze to prevent assaults</h4>
-      <p>Nine Inch Nails</p>
-    </a>
-      
-    <a class="item item-thumbnail-left" href="#">
-      <img src="icons/search.svg"
-           height="78px" width="80px">
-      <h2>Pretty Hate Machine</h2>
-      <p>Nine Inch Nails</p>
-    </a>
-      
-    <a class="item item-thumbnail-left" href="#">
-      <img src="icons/search.svg"
-           height="78px" width="80px">
-      <h2>Pretty Hate Machine</h2>
-      <p>Nine Inch Nails</p>
-    </a>
-      
-    <a class="item item-thumbnail-left" href="#">
-      <img src="icons/search.svg"
-           height="78px" width="80px">
-      <h2>Pretty Hate Machine</h2>
-      <p>Nine Inch Nails</p>
-    </a>
-      
-      
-    <a class="item item-thumbnail-left" href="#">
-      <img src="icons/search.svg"
-           height="78px" width="80px">
-      <h2>Pretty Hate Machine</h2>
-      <p>Nine Inch Nails</p>
-    </a>
-
-  </div>
+	<div ng-show="showSpinner" ng-include="'_spinner.html'"></div>
+  <div ng-hide="showSpinner">
+		<div class="list">
+			<a class="item item-thumbnail-left" href="{{ article.url }}" ng-repeat="article in articles">
+				<img src="{{ article.image }}" height="78px" width="80px">
+				<h4 ng-bind="article['title']"></h4>
+				<p ng-bind="article['date']"></p>
+			</a>
+		</div>
+	</div>
 
 </div>

@@ -16,8 +16,8 @@ traits:
           default: 50507
 
 schemas:
-  - Article_collection: '{"$schema":"http://json-schema.org/schema","title":"Article collection","type":"object","properties":{"objects":{"type":"array","items":{"$schema":"http://json-schema.org/schema","type":"object","description":"The canonical Article representation","properties":{"title":{"type":"string"},"date":{"type":"string"},"url":{"type":"string"},"image":{"type":"string"}},"required":[]}}}}'
-  - Article_member: '{"$schema":"http://json-schema.org/schema","type":"object","description":"The canonical Article representation","properties":{"object":{"type":"object","properties":{"title":{"type":"string"},"date":{"type":"string"},"url":{"type":"string"},"image":{"type":"string"}},"required":[]}}}'
+  - Article_collection: '{"$schema":"http://json-schema.org/schema","title":"Article collection","type":"object","properties":{"objects":{"type":"array","items":{"$schema":"http://json-schema.org/schema","type":"object","description":"The canonical Article representation","properties":{"title":{"type":"string"},"date":{"type":"string"},"url":{"type":"string"},"image":{"type":"string"},"seq":{"type":"integer"}},"required":[]}}}}'
+  - Article_member: '{"$schema":"http://json-schema.org/schema","type":"object","description":"The canonical Article representation","properties":{"object":{"type":"object","properties":{"title":{"type":"string"},"date":{"type":"string"},"url":{"type":"string"},"image":{"type":"string"},"seq":{"type":"integer"}},"required":[]}}}'
 
 resourceTypes:
   - dolan_db_collection:
