@@ -1,9 +1,9 @@
 angular
   .module('brazilUnknown')
-  .controller('ArticlesController', function($scope, Article, supersonic) {
-	$scope.navbarTitle = "Articles";
+  .controller('ArticlesController', function ($scope, Article, supersonic) {
 	$scope.articles = null;
 	$scope.showSpinner = true;
+
 	Article.all().whenChanged( function (articles) {
 		$scope.$apply( function () {
 			articles.sort( function (a, b) {

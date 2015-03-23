@@ -1,4 +1,4 @@
-<div class="padding">
+<div class="padding" ng-controller="HomeController">
 
 	<super-navbar>
 		<super-navbar-title>
@@ -6,4 +6,8 @@
 		</super-navbar-title>
 	</super-navbar>
 
+	<div ng-show="showSpinner" ng-include="'_spinner.html'"></div>
+	<div ng-hide="showSpinner">
+		<div ng-bind-html="htmlArticle"></div>
+	</div>
 </div>
