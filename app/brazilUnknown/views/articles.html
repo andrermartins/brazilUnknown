@@ -9,11 +9,13 @@
 	<div ng-show="showSpinner" ng-include="'_spinner.html'"></div>
   <div ng-hide="showSpinner">
 		<div class="list">
-			<a class="item item-thumbnail-left" href="home.html" data-params-url="{{ article.url }}" ng-repeat="article in articles">
-				<img src="{{ article.image }}" height="78px" width="80px">
-				<h4 ng-bind="article['title']"></h4>
-				<p ng-bind="article['date']"></p>
-			</a>
+			<super-navigate location="brazilUnknown#show" data-params-url="{{ article.url }}" data-params-title="{{ article.title }}" ng-repeat="article in articles">
+				<a class="item item-thumbnail-left">
+					<img src="{{ article.image }}" height="78px" width="80px">
+					<h4 ng-bind="article['title']"></h4>
+					<p ng-bind="article['date']"></p>
+				</a>
+			</super-navigate>
 		</div>
 	</div>
 

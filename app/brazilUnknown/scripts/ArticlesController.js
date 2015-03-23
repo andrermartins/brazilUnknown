@@ -13,4 +13,5 @@ angular
 			$scope.showSpinner = false;
 		});
 	});
+
   });
